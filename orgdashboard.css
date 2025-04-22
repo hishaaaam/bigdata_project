@@ -1,0 +1,190 @@
+/* Base Reset & Body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #e1d9f4, #f0ecf9);
+    color: #222;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .logo span {
+    color: #7f56d9;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .login-btn {
+    background-color: #7f56d9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .login-btn:hover {
+    background-color: #6843c1;
+    transform: scale(1.05);
+  }
+  
+  /* Dashboard Main */
+  .dashboard {
+    padding: 40px;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 32px;
+    color: #333;
+  }
+  
+  /* Events Grid */
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Event Card */
+  .event-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+  }
+  
+  .event-card h3 {
+    color: #7f56d9;
+    margin-bottom: 10px;
+  }
+  
+  .event-card p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 5px;
+  }
+  
+/* Event Form Modal Styles */
+.event-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden; /* Hide the modal by default */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.event-form-modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.event-form-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-form-container h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.event-form-container input,
+.event-form-container select,
+.event-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.event-form-container .form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-form-container .form-buttons button {
+  width: 48%;
+}
+
+  
+  /* Button Styles */
+  .primary-btn,
+  .secondary-btn {
+    font-size: 14px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .primary-btn {
+    background-color: #7f56d9;
+    color: white;
+  }
+  
+  .secondary-btn {
+    background-color: white;
+    color: #7f56d9;
+    border: 2px solid #7f56d9;
+  }
+  
+  .primary-btn:hover,
+  .secondary-btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

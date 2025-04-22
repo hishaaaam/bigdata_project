@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Events - EventHub</title>
+  <link rel="stylesheet" href="attendee.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">Event<span>Hub</span></div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Explore</a></li>
+      <li><a href="#">My RSVPs</a></li>
+    </ul>
+    <button class="login-btn" onclick="logout()">Logout</button>
+  </div>
+
+  <!-- Event Section -->
+  <div class="auth-wrapper" style="flex-direction: column; padding: 40px;">
+    <h2 style="color: #7f56d9;">Available Events</h2>
+    <div id="eventContainer" style="width: 100%; max-width: 800px; margin-top: 20px;"></div>
+  </div>
+
+  <!-- RSVP Modal -->
+  <div id="rsvpModal" class="rsvp-modal">
+    <div class="rsvp-form-container">
+      <h2>RSVP for Event</h2>
+      <form onsubmit="submitRSVP(event)">
+        <input type="hidden" id="eventId">
+        <input type="text" id="userName" placeholder="Your Name" required />
+        <input type="email" id="userEmail" placeholder="Your Email" required />
+        <input type="tel" id="userMobile" placeholder="Your Mobile Number" required />
+
+        <div class="form-buttons">
+          <button type="submit" class="primary-btn">Submit</button>
+          <button type="button" class="secondary-btn" onclick="closeRSVPModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="attendee.js"></script>
+</body>
+</html>
